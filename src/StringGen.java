@@ -1,11 +1,12 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class StringGen {
 
-    static public String generateString(int Size) {
+    static public String generateString(Scanner Size) {
         Random r = new Random();
 
-        char[] array = new char[Size];
+        char[] array = new char[Size.nextInt()];
 
         StringBuilder text = new StringBuilder();
 

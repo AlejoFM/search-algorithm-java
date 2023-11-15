@@ -1,5 +1,11 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class FindMethodByAlejo {
-    public static int stringSearch(String string, String pattern) {
+    public static List<Integer> stringSearch(String string, String pattern) {
+
+        List<Integer> positions = new ArrayList<>();
+
         int longitudTexto = string.length();
         int longitudPatron = pattern.length();
 
@@ -13,11 +19,12 @@ public class FindMethodByAlejo {
             }
 
             if (j == longitudPatron) {
-                System.out.println("La subcadena se encontró en la posición " + i);
-                return i; // Retorna la posición donde se encuentra la subcadena
+                positions.add(i); //Agrega la posición inicial de coincidencia.
             }
         }
-        System.out.println("La subcadena no se encontró en el texto.");
-        return -1; // Retorna -1 si no se encuentra la subcadena
+        if (positions.isEmpty()){
+            positions.add(-1);
+        }
+        return positions;
     }
 }
