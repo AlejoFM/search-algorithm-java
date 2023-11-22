@@ -12,15 +12,12 @@ public class Probability_Test {
         long tries = 0;
         while(c == 0){
             tries++;
-//                System.out.println("Running");
 
             StringBuilder text = new StringBuilder();
 
             for(int i = 0; i < p.pattern().length(); i++){
                 text.append((char)(r.nextInt(26) +97));
             }
-//            System.out.println(text.toString());
-//            System.out.println(array);
             Matcher m = p.matcher(text.toString()); // Pasamos por parametro el string previamente cargado aleatoriamente.
 
             while(m.find()) //Se busca la coincidencia hasta el final de string
@@ -30,7 +27,6 @@ public class Probability_Test {
                 System.out.println("End position of Matching String (java) "+m.end()); // Se encuentra la posición final
             }
             stopTime = System.currentTimeMillis();
-//                System.out.println(" Number of matches : "+c); //Se muestra por consola la cantidad de coincidiencias
         }
         System.out.println("Intentos: " + tries);
         System.out.println("Elapsed time was " + (stopTime - startTime) + " miliseconds."); // Se muestra por consolaa el tiempo de ejecución.
