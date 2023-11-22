@@ -24,12 +24,5 @@ public class Main {
         System.out.println(searchResultAlejo.size());
         System.out.println("Elapsed time was " + (stopTimeAlejoSearch - startTimeAlejoSearch) + " miliseconds."); // Se muestra por consola el tiempo de ejecución.
     }
-    private static void showPositions(ListIterator<Integer> iterator, int patternLength) {
-        System.out.println("Positions found:");
-        while (iterator.hasNext()) {
-            int startPosition = iterator.next();
-            int endPosition = startPosition + patternLength - 1;
-            System.out.println("Start position: " + startPosition + ", End position: " + endPosition);
-        }
-    }
+
 }
