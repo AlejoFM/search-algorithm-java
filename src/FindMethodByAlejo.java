@@ -22,9 +22,7 @@ public class FindMethodByAlejo {
                 positions.add(i); //Agrega la posición inicial de coincidencia.
             }
         }
-        if (positions.isEmpty()){
-            positions.add(-1);
-        }
+
         return positions;
     }
 }

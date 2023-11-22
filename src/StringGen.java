@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 public class StringGen {
 
-    static public String generateString(Scanner Size) {
+    static public String generateString(Integer Size) {
         Random r = new Random();
 
-        char[] array = new char[Size.nextInt()];
+        char[] array = new char[Size];
 
         StringBuilder text = new StringBuilder();
 
